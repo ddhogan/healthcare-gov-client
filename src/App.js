@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown'
 import logo from './logo@2x.png';
-import 'react-dropdown/style.css'
+import './dropdown.css'
 import './App.css';
 
 class App extends Component {
   render() {
-    const options = [ 'one', 'two', 'three' ]
-    const defaultOption = options[0]
+    const options = [ 'objects', 'collections', 'index' ]
     
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} alt="healthcare.gov logo"/>
         </header>
-        <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+        <Dropdown options={options} onChange={this._onSelect} placeholder="Select an option" className="dropdown"/>
       </div>
     );
   }
