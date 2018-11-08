@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Dropdown from 'react-dropdown'
+import logo from './logo@2x.png';
+import 'react-dropdown/style.css'
 import './App.css';
 
 class App extends Component {
   render() {
+    const options = [ 'one', 'two', 'three' ]
+    const defaultOption = options[0]
+    
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <img src={logo} alt="healthcare.gov logo"/>
         </header>
+        <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
       </div>
     );
   }
