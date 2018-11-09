@@ -1,11 +1,14 @@
 .Dropdown-root {
   position: relative;
+  /* display: inline-block; */
 }
 
 .dropdown {
+  align-items: center;
   text-align: left;
   width: 200px;
   display: inline-block;
+  left: 10%;
 }
 
 .Dropdown-control {
