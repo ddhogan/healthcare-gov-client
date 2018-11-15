@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown'
+import fetch from 'isomorphic-fetch';
 import logo from './logo@2x.png';
 import './dropdown.css'
 import './App.css';
@@ -22,7 +23,12 @@ class App extends Component {
 
   onSetResult(result) {
     this.setState({data: result});
-    console.log(`${this.state.data.states}`)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(
+      `this.state.data is now this stuff:`, this.state.data
+    );
   }
 
   fetchContent = () => {
