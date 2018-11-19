@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Dropdown from 'react-dropdown'
 import fetch from 'isomorphic-fetch';
 import logo from './logo@2x.png';
 import './dropdown.css'
 import './App.css';
+import StatesContainer from './StatesContainer';
+import TopicsContainer from './TopicsContainer';
+import {fetchStates} from './contentActions';
 
 const options = [ 'articles', 'blog', 'questions', 'glossary', 'states', 'topics' ]
 
@@ -27,17 +31,27 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     console.log(
-      `this.state.data is now this stuff:`, this.state.data
+      `this.state.data is now: `, this.state.data
     );
   }
 
-  fetchContent = () => {
-    console.log(`Accessing https://www.healthcare.gov/api/${this.state.selected}.json ...`)
-    fetch(`https://www.healthcare.gov/api/${this.state.selected}.json`)
-      .then(response => response.json())
-      .then(response => this.onSetResult({ response }))
-  }
-  
+  // fetchContent () {
+  //   console.log(`Accessing https://www.healthcare.gov/api/${this.state.selected}.json ...`)
+  //   fetch(`https://www.healthcare.gov/api/${this.state.selected}.json`)
+  //     .then(response => response.json())
+  //     .then(response => this.onSetResult({ response }))
+  //     .then(function(response) {
+  //       switch(this.state.selected){
+  //         case 'states':
+  //           return <StatesContainer states={response.states}/>;
+  //         case 'topics':
+  //           return <TopicsContainer />
+  //         default:
+  //           return null;
+  //       }
+  //     })
+  // }
+
   render() {
         
     return (
@@ -54,11 +68,13 @@ class App extends Component {
           value={this.state.selected}
         />
         <button type="submit" onClick={this.fetchContent}>Submit</button>
-        <ul id="content"></ul>
         
       </div>
     );
   }
 }
+const mapDispatchToProps = dispatch => ({
+  fetchStates: () => dispatch(fetchStates()),
+})
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);
