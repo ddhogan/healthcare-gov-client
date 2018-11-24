@@ -19,7 +19,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <App />
-    </Router>,
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
