@@ -1,1 +1,2 @@
 export const FETCH_STATES = "FETCH_STATES";
+export const FETCH_TOPICS = "FETCH_TOPICS";

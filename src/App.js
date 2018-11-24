@@ -6,7 +6,7 @@ import StatesContainer from './containers/StatesContainer';
 import DropdownContainer from './containers/DropdownContainer';
 import TopicsContainer from './containers/TopicsContainer';
 import {fetchStates} from './actions/contentActions';
-import Link from 'react-router-dom/Link';
+// import Link from 'react-router-dom/Link';
 
 const App = () => {
 
@@ -14,7 +14,9 @@ const App = () => {
     <div className="App">
       <Header />
       <DropdownContainer />
-      <Route exact path="/states" component={StatesContainer} />
+      <div className="results">
+        <Route exact path="/topics" component={TopicsContainer} />
+      </div>
     </div>
   );
 }

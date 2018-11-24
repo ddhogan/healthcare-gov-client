@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Dropdown from 'react-dropdown'
 import '../css/dropdown.css'
 
@@ -39,11 +40,11 @@ class DropdownContainer extends Component {
           value={this.state.selected}
         />
 
-        <button type="submit" onClick={() => this.props.history.push('/states')}>Submit</button>
+        <button type="submit" onClick={() => this.props.history.push(`/${this.state.selected}`)}>Submit</button>
 
       </div>
     )
   }
 };
 
-export default DropdownContainer;
+export default withRouter(DropdownContainer);

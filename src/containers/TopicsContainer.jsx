@@ -10,7 +10,9 @@ class TopicsContainer extends Component {
 
   render() {
     return(
-      <div></div>
+      <div>
+        <p>These are all the topics</p>
+      </div>
     );
   }
 }
