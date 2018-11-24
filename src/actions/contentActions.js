@@ -6,7 +6,7 @@ export function fetchStates () {
   return (dispatch) => {
     fetch(`https://www.healthcare.gov/api/states.json`)
     .then(response => response.json())
-    .then(response => this.onSetResult({ response }))
+    // .then(response => this.onSetResult({ response }))
     .then(states => dispatch({ type:actionTypes.FETCH_STATES, payload: states }));
   }
 }
