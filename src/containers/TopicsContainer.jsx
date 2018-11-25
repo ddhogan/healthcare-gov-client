@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTopics } from '../actions/contentActions';
-import Topics from '../components/Topics';
+import TopicsList from '../components/TopicsList';
 
 class TopicsContainer extends Component {
   componentDidMount = () => {
@@ -12,7 +12,7 @@ class TopicsContainer extends Component {
     return(
       <div className="topicsContainer">
         <h2>Topics</h2>
-        <Topics topics={this.props.topics} />
+        <TopicsList topics={this.props.topics} />
       </div>
     );
   }

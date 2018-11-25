@@ -1,7 +1,7 @@
 import React from 'react';
 import Topic from './Topic';
 
-const Topics = (props) => {
+const TopicsList = (props) => {
   const topicsList = props.topics.map(topic => {
     return (
       <div>
@@ -17,4 +17,4 @@ const Topics = (props) => {
   );
 }
 
-export default Topics;
+export default TopicsList;
