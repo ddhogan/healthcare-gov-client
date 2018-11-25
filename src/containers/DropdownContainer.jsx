@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Dropdown from 'react-dropdown'
 import '../css/dropdown.css'
 
-const options = [ 'articles', 'blog', 'questions', 'glossary', 'states', 'topics' ];
+const options = [ 'states', 'topics', 'articles', 'blog', 'questions', 'glossary', ];
 
 class DropdownContainer extends Component {
   constructor() {
