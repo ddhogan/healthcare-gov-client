@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import contentReducer from './contentReducer';
 
 const rootReducer = combineReducers({
-  cpntent: contentReducer,
+  content: contentReducer,
 })
 
 export default rootReducer;
