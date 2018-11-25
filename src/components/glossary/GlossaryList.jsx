@@ -13,7 +13,6 @@ const GlossaryList = (props) => {
     return 0;
   });
 
-  // const itemList = props.glossaryItems.map(item => {
   const itemList = sortedItems.map(item => {
     return (
       <div>
