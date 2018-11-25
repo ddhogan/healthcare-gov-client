@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTopics } from '../actions/contentActions';
-import TopicsList from '../components/TopicsList';
+import TopicsList from '../components/topics/TopicsList';
 
 class TopicsContainer extends Component {
   componentDidMount = () => {

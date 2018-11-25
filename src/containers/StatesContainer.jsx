@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStates } from '../actions/contentActions';
-import StatesList from '../components/StatesList';
+import StatesList from '../components/states/StatesList';
 
 class StatesContainer extends Component {
   componentDidMount = () => {
