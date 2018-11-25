@@ -20,3 +20,13 @@ export function fetchTopics () {
     .then(topics => dispatch({ type: actionTypes.FETCH_TOPICS, payload: topics.topics }));
   };
 };
+
+export function fetchGlossary () {
+  console.log(`Accessing https://www.healthcare.gov/api/glossary.json ...`);
+  return (dispatch) => {
+    dispatch({ type: actionTypes.LOADING_GLOSSARY });
+    return fetch(`https://www.healthcare.gov/api/topics.json`)
+    .then(response => response.json())
+    .then(glossary => dispatch({ type: actionTypes.FETCH_GLOSSARY, payload: glossary.topics }));
+  };
+};

@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchGlossary } from '../actions/contentActions';
+import GlossaryList from '../components/glossary/GlossaryList';
 
 class GlossaryContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-
-    };
+  componentDidMount = () => {
+    this.props.fetchGlossary();
   }
 
   render() {
     return(
-      <div>
-        <p>These are all the glossary items</p>
+      <div className="GlossaryContainer">
+        <h2>Glossary Items</h2>
+        <GlossaryList glossaryItems={this.props.glossary}/>
       </div>
     );
   }
 }
 
-export default GlossaryContainer;
+const mapStateToProps = state => ({ glossary: state.content.glossary });
+
+const mapDispatchToProps = dispatch => ({
+  fetchGlossary: () => dispatch(fetchGlossary()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(GlossaryContainer);

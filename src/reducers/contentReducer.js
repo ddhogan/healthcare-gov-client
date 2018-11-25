@@ -22,6 +22,12 @@ export default function contentReducer(state = {
     case actionTypes.FETCH_STATES:
       return { ...state, loading: false, states: action.payload, };
     
+    case actionTypes.LOADING_GLOSSARY:
+      return { ...state, loading: true, glossary: [], };
+    
+    case actionTypes.FETCH_GLOSSARY:
+      return { ...state, loading: false, glossary: action.payload, };
+
     default: return state;
   }
 }

@@ -3,3 +3,6 @@ export const FETCH_STATES = "FETCH_STATES";
 
 export const LOADING_TOPICS = "LOADING_TOPICS";
 export const FETCH_TOPICS = "FETCH_TOPICS";
+
+export const LOADING_GLOSSARY = "LOADING_GLOSSARY";
+export const FETCH_GLOSSARY = "FETCH_GLOSSARY";
