@@ -16,7 +16,7 @@ const StatesList = (props) => {
   const statesList = sortedStates.map(USstate => {
     return (
       <div>
-        <State title={USstate.title} url={USstate.url} lang={USstate.lang}/>
+        <State title={USstate.title} url={USstate.url} lang={USstate.lang} />
       </div>
     )
   });
