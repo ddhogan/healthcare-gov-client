@@ -4,7 +4,7 @@ const Topic = (props) => {
   // console.log(props)
   return (
     <div>
-      <li>Topic: <a href={props.url}> {props.title} </a></li>
+      <li><a href={props.url}> {props.title} </a></li><br></br>
     </div>
   );
 }
