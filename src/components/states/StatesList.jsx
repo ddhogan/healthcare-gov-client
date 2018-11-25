@@ -22,9 +22,9 @@ const StatesList = (props) => {
   });
 
   return (
-    <ul className="statesList">
+    <div className="statesList">
         {statesList}
-    </ul>
+    </div>
   );
 }
 
