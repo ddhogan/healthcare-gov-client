@@ -16,6 +16,6 @@ export function fetchTopics () {
     dispatch({ type: actionTypes.LOADING_TOPICS });
     return fetch(`https://www.healthcare.gov/api/topics.json`)
     .then(response => response.json())
-    .then(topics => dispatch({ type: actionTypes.FETCH_TOPICS, payload: topics }));
+    .then(topics => dispatch({ type: actionTypes.FETCH_TOPICS, payload: topics.topics }));
   };
 };
