@@ -1,5 +1,7 @@
 # This is a test project for interacting with the HealthCare.gov API
-### It does the following things:
+
+## It does the following things:
+
 * :heavy_check_mark: Displays the available content types in a dropdown menu
 * :heavy_check_mark: After selecting a content type, displays a list of objects in that collection, including the title, url, and excerpt
 * :heavy_check_mark: Clicking one of those links takes the user to that page. Navigating back in the browser takes the user back to the list of objects they previously selected.
