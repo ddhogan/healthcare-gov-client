@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Topic = (props) => {
-
+  console.log(props)
   return (
     <div>
-      <p>{this.props.topic.title}</p>
+      <p>{props.title}</p>
     </div>
   );
 }
