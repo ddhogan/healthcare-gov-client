@@ -1,7 +1,6 @@
 import React from 'react';
 
 const State = (props) => {
-  // console.log(props)
   const baseUrl = "https://www.healthcare.gov";
   return (
     <div>
