@@ -40,3 +40,23 @@ export function fetchArticles () {
     .then(articles => dispatch({ type: actionTypes.FETCH_ARTICLES, payload: articles.articles }));
   };
 };
+
+export function fetchBlog () {
+  console.log(`Accessing https://www.healthcare.gov/api/blog.json ...`);
+  return (dispatch) => {
+    dispatch({ type: actionTypes.LOADING_BLOG });
+    return fetch(`https://www.healthcare.gov/api/blog.json`)
+    .then(response => response.json())
+    .then(blog => dispatch({ type: actionTypes.FETCH_BLOG, payload: blog.blog }));
+  };
+};
+
+export function fetchQuestions () {
+  console.log(`Accessing https://www.healthcare.gov/api/questions.json ...`);
+  return (dispatch) => {
+    dispatch({ type: actionTypes.LOADING_QUESTIONS });
+    return fetch(`https://www.healthcare.gov/api/questions.json`)
+    .then(response => response.json())
+    .then(questions => dispatch({ type: actionTypes.FETCH_QUESTIONS, payload: questions.questions }));
+  };
+};
