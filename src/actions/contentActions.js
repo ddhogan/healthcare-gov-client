@@ -6,7 +6,6 @@ export function fetchStates () {
   return (dispatch) => {
     fetch(`https://www.healthcare.gov/api/states.json`)
     .then(response => response.json())
-    // .then(response => this.onSetResult({ response }))
     .then(states => dispatch({ type:actionTypes.FETCH_STATES, payload: states }));
   }
 }
@@ -14,9 +13,9 @@ export function fetchStates () {
 export function fetchTopics () {
   console.log(`Accessing https://www.healthcare.gov/api/topics.json ...`);
   return (dispatch) => {
-    fetch(`https://www.healthcare.gov/api/topics.json`)
+    dispatch({ type: actionTypes.LOADING_TOPICS });
+    return fetch(`https://www.healthcare.gov/api/topics.json`)
     .then(response => response.json())
-    // .then(response => this.onSetResult({ response }))
-    .then(topics => dispatch({ type:actionTypes.FETCH_TOPICS, payload: topics }));
-  }
-}
+    .then(topics => dispatch({ type: actionTypes.FETCH_TOPICS, payload: topics }));
+  };
+};

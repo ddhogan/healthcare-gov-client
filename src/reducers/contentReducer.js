@@ -9,10 +9,13 @@ export default function contentReducer(state = {
   topics: [],
 }, action) {
   switch(action.type){
-    case actionTypes.FETCH_STATES:
-      return {...state, states: action.payload};
+    
+    case actionTypes.LOADING_TOPICS:
+      return { ...state, loading: true, topics: [], };
+    
     case actionTypes.FETCH_TOPICS:
-      return {...state, topics: action.payload};
+      return { ...state, loading: false, topics: action.payload, };
+    
     default: return state;
   }
 }
