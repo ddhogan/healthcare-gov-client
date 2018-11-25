@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchTopics } from '../actions/contentActions';
+import Topics from '../components/Topics';
 
 class TopicsContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-
-    };
+  componentDidMount = () => {
+    this.props.fetchTopics();
   }
 
   render() {
     return(
-      <div>
-        <p>These are all the topics</p>
+      <div className="topicsContainer">
+        <h2>Topics</h2>
+        <Topics topics={this.props.topics} />
       </div>
     );
   }
 }
 
-export default TopicsContainer;
+const mapStateToProps = state => ({ topics: state.content.topics });
+
+const mapDispatchToProps = dispatch => ({
+  fetchTopics: () => dispatch(fetchTopics()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopicsContainer);
