@@ -9,7 +9,6 @@ import GlossaryContainer from './containers/GlossaryContainer';
 import ArticlesContainer from './containers/ArticlesContainer';
 import BlogContainer from './containers/BlogContainer';
 import QuestionsContainer from './containers/QuestionsContainer';
-// import Link from 'react-router-dom/Link';
 
 const App = () => {
 
