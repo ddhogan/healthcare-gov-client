@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import USState from '../components/USState';
+// import USState from '../components/USState';
 
 class StatesContainer extends Component {
   constructor() {
@@ -9,20 +9,18 @@ class StatesContainer extends Component {
   }
 
   render() {
-    const statesList = this.props.states.map(usState => {
-      return {
-        title: usState.title,
-        url: usState.url,
-        excerpt: usState.excerpt,
-      }
-    });
+    // const statesList = this.props.states.map(usState => {
+    //   return {
+    //     title: usState.title,
+    //     url: usState.url,
+    //     excerpt: usState.excerpt,
+    //   }
+    // });
   
     return(
       <div>
         <h2>States</h2>
-        <ul>
-          <USState usStates={statesList}/>
-        </ul>
+        <p>These are all the glossary items</p>
       </div>
     );
   }
