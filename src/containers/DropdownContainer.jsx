@@ -10,24 +10,19 @@ class DropdownContainer extends Component {
     super();
     this.state = {
       selected: '',
-      data: undefined,
     };
     this._onSelect = this._onSelect.bind(this)
   }
   _onSelect(option) {
-    console.log('You selected ', option.label)
     this.setState({selected: option.label})
+    console.log('You selected ', option.label)
   }
 
-  onSetResult(result) {
-    this.setState({data: result});
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log(
-      `this.state.data is now: `, this.state.data
-    );
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log(
+  //     `this.state.selected is now: `, this.state.selected
+  //   );
+  // }
 
   render() {
     return (
