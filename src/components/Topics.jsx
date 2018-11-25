@@ -11,16 +11,16 @@ const Topics = (props) => {
   // const topicsList = topicsArray.map(topic => {
   const topicsList = props.topics.map(topic => {
     return (
-      <div key={topic.id}>
-        { <Topic topic={topic} /> }
+      <div>
+        <Topic title={topic.title} url={topic.url} />
       </div>
     )
   });
 
   return (
-    <div className="topicsList">
+    <ul className="topicsList">
         {topicsList}
-    </div>
+    </ul>
   );
 }
 
