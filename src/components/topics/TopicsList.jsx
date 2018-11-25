@@ -5,7 +5,7 @@ const TopicsList = (props) => {
   const topicsList = props.topics.map(topic => {
     return (
       <div>
-        <Topic title={topic.title} url={topic.url} />
+        <Topic title={topic.title} url={topic.url} lang={topic.lang} desc={topic["meta-description"]} />
       </div>
     )
   });
