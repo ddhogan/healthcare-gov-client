@@ -5,16 +5,14 @@ const BlogList = (props) => {
 
   const itemList = props.blogPosts.map(item => {
     return (
-      <div>
-        <BlogPost title={item.title} url={item.url} lang={item.lang} excerpt={item.excerpt} />
-      </div>
+      <BlogPost title={item.title} url={item.url} lang={item.lang} excerpt={item.excerpt} />
     )
   });
 
   return (
-    <ul className="BlogList">
-        {itemList}
-    </ul>
+    <div className="BlogList">
+      {itemList}
+    </div>
   );
 }
 

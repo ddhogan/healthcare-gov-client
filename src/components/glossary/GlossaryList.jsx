@@ -15,16 +15,14 @@ const GlossaryList = (props) => {
 
   const itemList = sortedItems.map(item => {
     return (
-      <div>
-        <GlossaryItem title={item.title} url={item.url} lang={item.lang} desc={item["meta-description"]} />
-      </div>
+      <GlossaryItem title={item.title} url={item.url} lang={item.lang} desc={item["meta-description"]} />
     )
   });
 
   return (
-    <ul className="glossaryItemList">
-        {itemList}
-    </ul>
+    <div className="glossaryItemList">
+      {itemList}
+    </div>
   );
 }
 

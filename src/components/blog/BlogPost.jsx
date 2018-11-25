@@ -5,7 +5,7 @@ const BlogPost = (props) => {
   const baseUrl = "https://www.healthcare.gov";
   return (
     <div className="card">
-      <li><a href={baseUrl + props.url}> {props.title} </a> <small>({props.lang})</small></li>
+      <a href={baseUrl + props.url}> {props.title} </a> <small>({props.lang})</small>
       <div dangerouslySetInnerHTML={ {__html: props.excerpt} } />
     </div>
   );

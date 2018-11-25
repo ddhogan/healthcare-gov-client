@@ -4,16 +4,14 @@ import Topic from './Topic';
 const TopicsList = (props) => {
   const topicsList = props.topics.map(topic => {
     return (
-      <div>
-        <Topic title={topic.title} url={topic.url} lang={topic.lang} desc={topic["meta-description"]} />
-      </div>
+      <Topic title={topic.title} url={topic.url} lang={topic.lang} desc={topic["meta-description"]} />
     )
   });
 
   return (
-    <ul className="topicsList">
-        {topicsList}
-    </ul>
+    <div className="topicsList">
+      {topicsList}
+    </div>
   );
 }
 

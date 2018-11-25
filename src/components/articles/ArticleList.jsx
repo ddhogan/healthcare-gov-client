@@ -5,16 +5,14 @@ const ArticleList = (props) => {
 
   const itemList = props.articles.map(item => {
     return (
-      <div>
-        <Article title={item.title} url={item.url} lang={item.lang} bite={item.bite}/>
-      </div>
+      <Article title={item.title} url={item.url} lang={item.lang} bite={item.bite}/>
     )
   });
 
   return (
-    <ul className="ArticleList">
-        {itemList}
-    </ul>
+    <div className="ArticleList">
+      {itemList}
+    </div>
   );
 }
 

@@ -5,14 +5,12 @@ const QuestionList = (props) => {
 
   const itemList = props.questions.map(item => {
     return (
-      <div>
-        <Question title={item.title} url={item.url} lang={item.lang}/>
-      </div>
+      <Question title={item.title} url={item.url} lang={item.lang}/>
     )
   });
 
   return (
-    (itemList.length === 0) ? <p>There are no Questions to display.</p> : <ul className="QuestionList">{itemList}</ul>
+    (itemList.length === 0) ? <p>There are no Questions to display.</p> : <div className="QuestionList">{itemList}</div>
   );
 }
 
