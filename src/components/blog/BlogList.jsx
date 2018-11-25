@@ -17,7 +17,7 @@ const BlogList = (props) => {
   // const itemList = sortedItems.map(item => {
     return (
       <div>
-        <BlogPost title={item.title} url={item.url} lang={item.lang}/>
+        <BlogPost title={item.title} url={item.url} lang={item.lang} excerpt={item.excerpt} />
       </div>
     )
   });
