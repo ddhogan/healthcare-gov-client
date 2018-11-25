@@ -30,3 +30,13 @@ export function fetchGlossary () {
     .then(glossary => dispatch({ type: actionTypes.FETCH_GLOSSARY, payload: glossary.topics }));
   };
 };
+
+export function fetchArticles () {
+  console.log(`Accessing https://www.healthcare.gov/api/articles.json ...`);
+  return (dispatch) => {
+    dispatch({ type: actionTypes.LOADING_ARTICLES });
+    return fetch(`https://www.healthcare.gov/api/articles.json`)
+    .then(response => response.json())
+    .then(articles => dispatch({ type: actionTypes.FETCH_ARTICLES, payload: articles.articles }));
+  };
+};

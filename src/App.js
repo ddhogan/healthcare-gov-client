@@ -6,6 +6,7 @@ import StatesContainer from './containers/StatesContainer';
 import DropdownContainer from './containers/DropdownContainer';
 import TopicsContainer from './containers/TopicsContainer';
 import GlossaryContainer from './containers/GlossaryContainer';
+import ArticlesContainer from './containers/ArticlesContainer';
 // import Link from 'react-router-dom/Link';
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
         <Route exact path="/topics" component={TopicsContainer} />
         <Route exact path="/states" component={StatesContainer} />
         <Route exact path="/glossary" component={GlossaryContainer} />
+        <Route exact path="/articles" component={ArticlesContainer} />
+
       </div>
     </div>
   );

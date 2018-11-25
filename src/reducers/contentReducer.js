@@ -28,6 +28,12 @@ export default function contentReducer(state = {
     case actionTypes.FETCH_GLOSSARY:
       return { ...state, loading: false, glossary: action.payload, };
 
+    case actionTypes.LOADING_ARTICLES:
+      return { ...state, loading: true, articles: [], };
+    
+    case actionTypes.FETCH_ARTICLES:
+      return { ...state, loading: false, articles: action.payload, };
+
     default: return state;
   }
 }
