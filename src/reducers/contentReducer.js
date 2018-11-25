@@ -16,6 +16,12 @@ export default function contentReducer(state = {
     case actionTypes.FETCH_TOPICS:
       return { ...state, loading: false, topics: action.payload, };
     
+    case actionTypes.LOADING_STATES:
+      return { ...state, loading: true, states: [], };
+    
+    case actionTypes.FETCH_STATES:
+      return { ...state, loading: false, states: action.payload, };
+    
     default: return state;
   }
 }

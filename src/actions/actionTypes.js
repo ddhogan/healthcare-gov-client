@@ -1,3 +1,4 @@
+export const LOADING_STATES = "LOADING_STATES";
 export const FETCH_STATES = "FETCH_STATES";
 
 export const LOADING_TOPICS = "LOADING_TOPICS";

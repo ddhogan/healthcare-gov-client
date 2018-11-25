@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
-// import USState from '../components/USState';
+import { connect } from 'react-redux';
+import { fetchStates } from '../actions/contentActions';
+import StatesList from '../components/StatesList';
 
 class StatesContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-    };
+  componentDidMount = () => {
+    this.props.fetchStates();
   }
 
   render() {
-    // const statesList = this.props.states.map(usState => {
-    //   return {
-    //     title: usState.title,
-    //     url: usState.url,
-    //     excerpt: usState.excerpt,
-    //   }
-    // });
-  
     return(
-      <div>
+      <div className="statesContainer">
         <h2>States</h2>
-        <p>These are all the glossary items</p>
+        <StatesList states={this.props.states}/>
       </div>
     );
   }
 }
 
-export default StatesContainer;
+const mapStateToProps = state => ({ states: state.content.states });
+
+const mapDispatchToProps = dispatch => ({
+  fetchStates: () => dispatch(fetchStates()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(StatesContainer);
