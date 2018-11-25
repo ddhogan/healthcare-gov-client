@@ -6,7 +6,7 @@ const ArticleList = (props) => {
   const itemList = props.articles.map(item => {
     return (
       <div>
-        <Article title={item.title} url={item.url} lang={item.lang}/>
+        <Article title={item.title} url={item.url} lang={item.lang} bite={item.bite}/>
       </div>
     )
   });
