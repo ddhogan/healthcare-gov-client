@@ -7,6 +7,15 @@
 * :heavy_check_mark: Clicking one of those links takes the user to that page. Navigating back in the browser takes the user back to the list of objects they previously selected.
 * :heavy_check_mark: States and Glossary items are displayed alphabetically.
 
+## Tests to write:
+* [ ] a test in each component to see that it's rendering the right things
+
+### Wish list:
+* [ ] performance: don't re-fetch when navigate back to list
+* [ ] pagination
+* [ ] set responsive min/max width of cards
+* [ ] move submit button next to dropdown list
+
 ------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
