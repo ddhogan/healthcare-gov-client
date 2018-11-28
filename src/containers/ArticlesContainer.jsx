@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchArticles } from '../actions/contentActions';
 import ArticleList from '../components/articles/ArticleList';
 
-class ArticlesContainer extends Component {
+export class ArticlesContainer extends Component {
   componentDidMount = () => {
     this.props.fetchArticles();
   }
