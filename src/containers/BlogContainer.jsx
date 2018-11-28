@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchBlog } from '../actions/contentActions';
 import BlogList from '../components/blog/BlogList';
 
-class BlogContainer extends Component {
+export class BlogContainer extends Component {
   componentDidMount = () => {
     this.props.fetchBlog();
   }
