@@ -13,7 +13,7 @@ describe('<QuestionsContainer />', () => {
 
   beforeEach(() => {
     wrapper = shallow(<QuestionsContainer fetchQuestions={() => {}}/>);
-    wrapper.setProps({glossary: { title: 'How to antibiotics work?', url: 'http://healthcare.gov/medicine' }});
+    wrapper.setProps({questions: { title: 'How to antibiotics work?', url: 'http://healthcare.gov/medicine' }});
   })
 
   it('should render a <QuestionList /> when receiving the glossary items', () => {
