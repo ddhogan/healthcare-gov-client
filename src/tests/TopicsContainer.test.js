@@ -18,7 +18,6 @@ describe('<TopicsContainer />', () => {
 
   it('should render a <TopicsList /> when receiving the topics', () => {
     expect(wrapper.find(TopicsList));
-    // expect(wrapper.find(Topic));
   });
 
   it('should render a <Topic /> when receiving the topic', () => {
