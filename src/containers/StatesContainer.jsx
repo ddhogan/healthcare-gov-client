@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchStates } from '../actions/contentActions';
 import StatesList from '../components/states/StatesList';
 
-class StatesContainer extends Component {
+export class StatesContainer extends Component {
   componentDidMount = () => {
     this.props.fetchStates();
   }
