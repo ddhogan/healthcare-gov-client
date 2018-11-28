@@ -13,7 +13,7 @@ describe('<ArticlesContainer />', () => {
 
   beforeEach(() => {
     wrapper = shallow(<ArticlesContainer fetchArticles={() => {}}/>);
-    wrapper.setProps({questions: { articles: 'An interview with a Doctor', url: 'http://healthcare.gov/weeklypubs' }});
+    wrapper.setProps({articles: { title: 'An interview with a Doctor', url: 'http://healthcare.gov/weeklypubs' }});
   })
 
   it('should render a <ArticleList /> when receiving the articles', () => {
