@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchGlossary } from '../actions/contentActions';
 import GlossaryList from '../components/glossary/GlossaryList';
 
-class GlossaryContainer extends Component {
+export class GlossaryContainer extends Component {
   componentDidMount = () => {
     this.props.fetchGlossary();
   }
