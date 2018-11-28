@@ -13,7 +13,7 @@ describe('<BlogContainer />', () => {
 
   beforeEach(() => {
     wrapper = shallow(<BlogContainer fetchBlog={() => {}}/>);
-    wrapper.setProps({questions: { title: 'New features to speed application process', url: 'http://healthcare.gov/blog' }});
+    wrapper.setProps({blog: { title: 'New features to speed application process', url: 'http://healthcare.gov/blog' }});
   })
 
   it('should render a <BlogList /> when receiving the glossary items', () => {
