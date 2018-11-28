@@ -10,7 +10,7 @@
 ### Wish list (to-do list):
 * [ ] performance: don't re-fetch when navigate back to list
 * [ ] pagination (what if there were a lot of items?)
-* [ ] language filter or toggle for english/spanish language objects
+* [ ] filter or toggle for english/spanish language objects
 * [ ] set responsive min/max width of cards
 * [ ] move submit button next to dropdown list
 
