@@ -7,9 +7,10 @@
 * :heavy_check_mark: Clicking one of those links takes the user to that page. Navigating back in the browser takes the user back to the list of objects they previously selected.
 * :heavy_check_mark: States and Glossary items are displayed alphabetically.
 
-### Wish list:
+### Wish list (to-do list):
 * [ ] performance: don't re-fetch when navigate back to list
-* [ ] pagination
+* [ ] pagination (what if there were a lot of items?)
+* [ ] language filter or toggle for english/spanish language objects
 * [ ] set responsive min/max width of cards
 * [ ] move submit button next to dropdown list
 
