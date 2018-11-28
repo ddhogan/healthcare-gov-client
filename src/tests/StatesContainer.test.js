@@ -13,7 +13,7 @@ describe('<StatesContainer />', () => {
 
   beforeEach(() => {
     wrapper = shallow(<StatesContainer fetchStates={() => {}}/>);
-    wrapper.setProps({questions: { states: 'New Hampshire', url: 'http://healthcare.gov/NH' }});
+    wrapper.setProps({states: { title: 'New Hampshire', url: 'http://healthcare.gov/NH' }});
   })
 
   it('should render a <StatesList /> when receiving the glossary items', () => {
