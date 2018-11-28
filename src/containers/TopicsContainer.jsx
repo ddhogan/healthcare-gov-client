@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchTopics } from '../actions/contentActions';
 import TopicsList from '../components/topics/TopicsList';
 
-class TopicsContainer extends Component {
+export class TopicsContainer extends Component {  // added named export here to import it in the test
   componentDidMount = () => {
     this.props.fetchTopics();
   }
